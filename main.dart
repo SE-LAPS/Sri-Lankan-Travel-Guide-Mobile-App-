@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:travell_app/home.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:travel/constants.dart';
+import 'package:travel/screens/home/home_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -10,19 +12,16 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
+      title: 'Travels App',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        brightness: Brightness.light,
+        scaffoldBackgroundColor: Colors.white,
+        textTheme:
+            GoogleFonts.poppinsTextTheme().apply(displayColor: kTextColor),
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: Home()
+      home: HomeScreen(),
     );
   }
 }
-
-
-// color: #06091e
-// #010209
-// 
-// #a3ecec
